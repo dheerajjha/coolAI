@@ -5,9 +5,16 @@
 
 import UIKit
 
-class DiscoverCVDataSource: NSObject, UICollectionViewDataSource, UICollectionViewDelegate {
+class DiscoverCVDataSource: NSObject, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = appWidth(0.446)
+        let height = width * 1.61803398875
+        return .init(width: width, height: height)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        5
+        10
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -23,4 +30,6 @@ class DiscoverCVDataSource: NSObject, UICollectionViewDataSource, UICollectionVi
                         forItemAt indexPath: IndexPath) {
         cell.magicAppear()
     }
+    
+    
 }

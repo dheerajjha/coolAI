@@ -6,18 +6,31 @@
 import UIKit
 import SnapKit
 import MessageKit
-import BouncyLayout
 import FirebaseAnalytics
 
 class HomeViewController: UIViewController {
     
     private let rippleButtonSize: CGFloat = appWidth(0.6)
-    private let topPadding: CGFloat = 56
+    private let topPadding: CGFloat = 16
     private let minPadding: CGFloat = 16
     private let leftRightPadding: CGFloat = 16
     private let avatarSize: CGFloat = 56
     private lazy var rippleButtonCornerRadius: CGFloat = rippleButtonSize / 2
     
+    lazy var containerView: UIView = {
+        let scrollV = UIScrollView()
+        view.addSubview(scrollV)
+        scrollV.snp.makeConstraints { $0.edges.equalToSuperview() }
+        
+        let cv = UIView()
+        scrollV.addSubview(cv)
+        cv.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+            $0.width.equalTo(appWidth())
+            $0.height.equalTo(appHeight())
+        }
+        return cv
+    }()
     
     lazy var avatarTitleContainerView: UIView = {
         UIView()
@@ -34,6 +47,7 @@ class HomeViewController: UIViewController {
     lazy var titleLabel: UILabel = {
         let l = UILabel()
         l.text = "Hi \(UserData.s.current.displayName)"
+        l.numberOfLines = 0
         l.font = fontBig
         return l
     }()
@@ -60,7 +74,7 @@ class HomeViewController: UIViewController {
     
     let discoverCollectionDS = DiscoverCVDataSource()
     lazy var discoverCollectionView: UICollectionView = {
-        let layout = BouncyLayout()
+        let layout = UICollectionViewFlowLayout()
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cv.register(DiscoverCVCell.self, forCellWithReuseIdentifier: DiscoverCVCell.reuse)
         cv.delegate = discoverCollectionDS
@@ -82,9 +96,9 @@ class HomeViewController: UIViewController {
     }
     
     private func setupConstraints() {
-        view.addSubview(avatarTitleContainerView)
+        containerView.addSubview(avatarTitleContainerView)
         avatarTitleContainerView.snp.makeConstraints { make in
-            make.top.equalToSuperview().inset(topPadding)
+            make.top.equalToSuperview()
             make.left.right.equalToSuperview().inset(leftRightPadding)
         }
         
@@ -101,20 +115,20 @@ class HomeViewController: UIViewController {
             make.left.equalTo(avatarView.snp.right).inset(-minPadding)
         }
         
-        view.addSubview(rippleButton)
+        containerView.addSubview(rippleButton)
         rippleButton.snp.makeConstraints { make in
             make.top.equalTo(avatarTitleContainerView.snp.bottom).inset(-topPadding)
             make.width.height.equalTo(rippleButtonSize)
             make.centerX.equalToSuperview()
         }
         
-        view.addSubview(discoveryTitleLabel)
+        containerView.addSubview(discoveryTitleLabel)
         discoveryTitleLabel.snp.makeConstraints { make in
             make.top.equalTo(rippleButton.snp.bottom).inset(-topPadding)
             make.left.right.equalToSuperview().inset(leftRightPadding)
         }
         
-        view.addSubview(discoverCollectionView)
+        containerView.addSubview(discoverCollectionView)
         discoverCollectionView.snp.makeConstraints { make in
             make.top.equalTo(discoveryTitleLabel.snp.bottom).inset(-minPadding)
             make.left.right.equalToSuperview().inset(leftRightPadding)

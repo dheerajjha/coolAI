@@ -26,7 +26,6 @@
 		B35F0AA529F9887800C0E7E9 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35F0AA429F9887800C0E7E9 /* Color.swift */; };
 		B35F0AA729F98BBE00C0E7E9 /* AppSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35F0AA629F98BBE00C0E7E9 /* AppSize.swift */; };
 		B35F0AA929F9BC7B00C0E7E9 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35F0AA829F9BC7B00C0E7E9 /* Font.swift */; };
-		B35F0AAC29FA342B00C0E7E9 /* BouncyLayout in Frameworks */ = {isa = PBXBuildFile; productRef = B35F0AAB29FA342B00C0E7E9 /* BouncyLayout */; };
 		B35F0AAE29FA347C00C0E7E9 /* DiscoverCVDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35F0AAD29FA347C00C0E7E9 /* DiscoverCVDataSource.swift */; };
 		B35F0AB129FA394400C0E7E9 /* DiscoverCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35F0AB029FA394400C0E7E9 /* DiscoverCVCell.swift */; };
 		B35F0AC229FA8E6600C0E7E9 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35F0AC129FA8E6600C0E7E9 /* UIView+Extensions.swift */; };
@@ -76,7 +75,6 @@
 			files = (
 				B35F0A9F29F9828800C0E7E9 /* SnapKit in Frameworks */,
 				B3DB104429F979D7004BC7E4 /* Kingfisher in Frameworks */,
-				B35F0AAC29FA342B00C0E7E9 /* BouncyLayout in Frameworks */,
 				B35F0AC929FB10B600C0E7E9 /* FirebaseRemoteConfig in Frameworks */,
 				B35F0AC729FB10B600C0E7E9 /* FirebaseCrashlytics in Frameworks */,
 				B35F0AC529FB10B600C0E7E9 /* FirebaseAnalytics in Frameworks */,
@@ -212,7 +210,6 @@
 				B329537E29F71DD60026569E /* MessageKit */,
 				B3DB104329F979D7004BC7E4 /* Kingfisher */,
 				B35F0A9E29F9828800C0E7E9 /* SnapKit */,
-				B35F0AAB29FA342B00C0E7E9 /* BouncyLayout */,
 				B35F0AC429FB10B600C0E7E9 /* FirebaseAnalytics */,
 				B35F0AC629FB10B600C0E7E9 /* FirebaseCrashlytics */,
 				B35F0AC829FB10B600C0E7E9 /* FirebaseRemoteConfig */,
@@ -249,7 +246,6 @@
 				B329537D29F71DD50026569E /* XCRemoteSwiftPackageReference "MessageKit" */,
 				B3DB104229F979D7004BC7E4 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				B35F0A9D29F9828800C0E7E9 /* XCRemoteSwiftPackageReference "SnapKit" */,
-				B35F0AAA29FA342B00C0E7E9 /* XCRemoteSwiftPackageReference "BouncyLayout" */,
 				B35F0AC329FB10B600C0E7E9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = B329535A29F5B6E10026569E /* Products */;
@@ -559,14 +555,6 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		B35F0AAA29FA342B00C0E7E9 /* XCRemoteSwiftPackageReference "BouncyLayout" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/roberthein/BouncyLayout.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
-			};
-		};
 		B35F0AC329FB10B600C0E7E9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -595,11 +583,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B35F0A9D29F9828800C0E7E9 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
-		};
-		B35F0AAB29FA342B00C0E7E9 /* BouncyLayout */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B35F0AAA29FA342B00C0E7E9 /* XCRemoteSwiftPackageReference "BouncyLayout" */;
-			productName = BouncyLayout;
 		};
 		B35F0AC429FB10B600C0E7E9 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
