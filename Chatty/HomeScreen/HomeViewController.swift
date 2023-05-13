@@ -43,7 +43,6 @@ class HomeViewController: UIViewController {
         return av
     }()
     
-    
     lazy var titleLabel: UILabel = {
         let l = UILabel()
         l.text = "Hi \(UserData.s.current.displayName)"
@@ -72,14 +71,10 @@ class HomeViewController: UIViewController {
         return l
     }()
     
-    let discoverCollectionDS = DiscoverCVDataSource()
-    lazy var discoverCollectionView: UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
-        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.register(DiscoverCVCell.self, forCellWithReuseIdentifier: DiscoverCVCell.reuse)
-        cv.delegate = discoverCollectionDS
-        cv.dataSource = discoverCollectionDS
-        return cv
+    lazy var discoverContainerView: UIView = {
+        let v = UIView()
+        v.backgroundColor = .yellow
+        return v
     }()
     
     
@@ -128,11 +123,21 @@ class HomeViewController: UIViewController {
             make.left.right.equalToSuperview().inset(leftRightPadding)
         }
         
-        containerView.addSubview(discoverCollectionView)
-        discoverCollectionView.snp.makeConstraints { make in
+        containerView.addSubview(discoverContainerView)
+        discoverContainerView.snp.makeConstraints { make in
             make.top.equalTo(discoveryTitleLabel.snp.bottom).inset(-minPadding)
             make.left.right.equalToSuperview().inset(leftRightPadding)
             make.bottom.equalToSuperview()
+        }
+        
+        let sv = UIStackView()
+        sv.distribution = .fillEqually
+        discoverContainerView.addSubview(sv)
+        sv.addArrangedSubview(DiscoverCell(vm: .init(title: "title", description: "description", imageLink: "", _prompt: "")))
+        sv.addArrangedSubview(DiscoverCell(vm: .init(title: "title", description: "description", imageLink: "", _prompt: "")))
+        sv.addArrangedSubview(DiscoverCell(vm: .init(title: "title", description: "description", imageLink: "", _prompt: "")))
+        sv.snp.makeConstraints { make in
+            make.top.left.right.equalToSuperview()
         }
         
     }

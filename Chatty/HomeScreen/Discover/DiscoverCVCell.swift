@@ -5,19 +5,43 @@
 
 import UIKit
 
-class DiscoverCVCell: UICollectionViewCell {
+struct DiscoverCellVM {
+    let title: String
+    let description: String
+    let imageLink: String
+    let _prompt: String
+}
+
+class DiscoverCell: UIView {
     
-    static let reuse = #file
+    let vm: DiscoverCellVM
     
-    lazy var actionButton: ZFRippleButton = {
-        let b = ZFRippleButton()
-        b.setTitle("honey is cute", for: .normal)
-        b.backgroundColor = .green
-        return b
+    lazy var containerV: UIView = {
+        .init()
     }()
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    lazy var titleLabel: UILabel = {
+        let l = UILabel()
+        l.text = vm.title
+        return l
+    }()
+    
+    lazy var descriptionLabel: UILabel = {
+        let l = UILabel()
+        l.text = vm.description
+        return l
+    }()
+    
+    lazy var imageView: UIImageView = {
+        let iv = UIImageView()
+        let url = URL(string: vm.imageLink)
+        iv.kf.setImage(with: url)
+        return iv
+    }()
+    
+    init(vm: DiscoverCellVM) {
+        self.vm = vm
+        super.init(frame: .zero)
         setupConfiguration()
     }
     
@@ -26,9 +50,18 @@ class DiscoverCVCell: UICollectionViewCell {
     }
     
     private func setupConfiguration() {
-        self.addSubview(actionButton)
-        actionButton.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+        addSubview(containerV)
+        containerV.snp.makeConstraints { $0.edges.equalToSuperview().inset(8) }
+        
+        containerV.addSubview(titleLabel)
+        titleLabel.snp.makeConstraints {
+            $0.top.left.right.equalToSuperview()
+        }
+        
+        containerV.addSubview(descriptionLabel)
+        descriptionLabel.snp.makeConstraints {
+            $0.top.equalTo(titleLabel.snp.bottom).inset(-8)
+            $0.bottom.left.right.equalToSuperview()
         }
     }
 }
