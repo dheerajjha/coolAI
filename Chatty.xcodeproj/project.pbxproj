@@ -21,12 +21,14 @@
 		B329538129F71E110026569E /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B329538029F71E110026569E /* ChatViewController.swift */; };
 		B329538429F7898B0026569E /* MessageModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B329538329F7898B0026569E /* MessageModels.swift */; };
 		B329538629F78EA80026569E /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B329538529F78EA80026569E /* UserData.swift */; };
+		B356ABED2A3C7C4400E26F94 /* RippleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B356ABEC2A3C7C4400E26F94 /* RippleButton.swift */; };
+		B356ABEF2A3C80B000E26F94 /* CustomCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B356ABEE2A3C80B000E26F94 /* CustomCollectionView.swift */; };
+		B356ABF12A3C80FD00E26F94 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B356ABF02A3C80FD00E26F94 /* CustomCollectionViewCell.swift */; };
 		B35F0A9F29F9828800C0E7E9 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B35F0A9E29F9828800C0E7E9 /* SnapKit */; };
 		B35F0AA229F985C200C0E7E9 /* ZFRippleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35F0AA129F985C200C0E7E9 /* ZFRippleButton.swift */; };
 		B35F0AA529F9887800C0E7E9 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35F0AA429F9887800C0E7E9 /* Color.swift */; };
 		B35F0AA729F98BBE00C0E7E9 /* AppSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35F0AA629F98BBE00C0E7E9 /* AppSize.swift */; };
 		B35F0AA929F9BC7B00C0E7E9 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35F0AA829F9BC7B00C0E7E9 /* Font.swift */; };
-		B35F0AAE29FA347C00C0E7E9 /* DiscoverCVDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35F0AAD29FA347C00C0E7E9 /* DiscoverCVDataSource.swift */; };
 		B35F0AB129FA394400C0E7E9 /* DiscoverCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35F0AB029FA394400C0E7E9 /* DiscoverCVCell.swift */; };
 		B35F0AC229FA8E6600C0E7E9 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35F0AC129FA8E6600C0E7E9 /* UIView+Extensions.swift */; };
 		B35F0AC529FB10B600C0E7E9 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = B35F0AC429FB10B600C0E7E9 /* FirebaseAnalytics */; };
@@ -35,6 +37,7 @@
 		B35F0ACB29FB110F00C0E7E9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B35F0ACA29FB110F00C0E7E9 /* GoogleService-Info.plist */; };
 		B35F0ACD29FB131B00C0E7E9 /* RemoteConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35F0ACC29FB131B00C0E7E9 /* RemoteConfigs.swift */; };
 		B35F0AD529FB1C0700C0E7E9 /* remote_config_defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = B35F0AD429FB1C0700C0E7E9 /* remote_config_defaults.plist */; };
+		B3DA8CCD2A108C7E00D82347 /* DiscoverCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DA8CCC2A108C7E00D82347 /* DiscoverCV.swift */; };
 		B3DB104129F97922004BC7E4 /* BasicChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DB104029F97922004BC7E4 /* BasicChatViewController.swift */; };
 		B3DB104429F979D7004BC7E4 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B3DB104329F979D7004BC7E4 /* Kingfisher */; };
 /* End PBXBuildFile section */
@@ -55,16 +58,19 @@
 		B329538029F71E110026569E /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		B329538329F7898B0026569E /* MessageModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModels.swift; sourceTree = "<group>"; };
 		B329538529F78EA80026569E /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		B356ABEC2A3C7C4400E26F94 /* RippleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RippleButton.swift; sourceTree = "<group>"; };
+		B356ABEE2A3C80B000E26F94 /* CustomCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionView.swift; sourceTree = "<group>"; };
+		B356ABF02A3C80FD00E26F94 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		B35F0AA129F985C200C0E7E9 /* ZFRippleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZFRippleButton.swift; sourceTree = "<group>"; };
 		B35F0AA429F9887800C0E7E9 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		B35F0AA629F98BBE00C0E7E9 /* AppSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSize.swift; sourceTree = "<group>"; };
 		B35F0AA829F9BC7B00C0E7E9 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
-		B35F0AAD29FA347C00C0E7E9 /* DiscoverCVDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverCVDataSource.swift; sourceTree = "<group>"; };
 		B35F0AB029FA394400C0E7E9 /* DiscoverCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverCVCell.swift; sourceTree = "<group>"; };
 		B35F0AC129FA8E6600C0E7E9 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		B35F0ACA29FB110F00C0E7E9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B35F0ACC29FB131B00C0E7E9 /* RemoteConfigs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigs.swift; sourceTree = "<group>"; };
 		B35F0AD429FB1C0700C0E7E9 /* remote_config_defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = remote_config_defaults.plist; sourceTree = "<group>"; };
+		B3DA8CCC2A108C7E00D82347 /* DiscoverCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverCV.swift; sourceTree = "<group>"; };
 		B3DB104029F97922004BC7E4 /* BasicChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicChatViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -149,6 +155,9 @@
 			isa = PBXGroup;
 			children = (
 				B329536029F5B6E10026569E /* HomeViewController.swift */,
+				B356ABEE2A3C80B000E26F94 /* CustomCollectionView.swift */,
+				B356ABF02A3C80FD00E26F94 /* CustomCollectionViewCell.swift */,
+				B356ABEC2A3C7C4400E26F94 /* RippleButton.swift */,
 				B35F0AAF29FA393100C0E7E9 /* Discover */,
 			);
 			path = HomeScreen;
@@ -175,8 +184,8 @@
 		B35F0AAF29FA393100C0E7E9 /* Discover */ = {
 			isa = PBXGroup;
 			children = (
-				B35F0AAD29FA347C00C0E7E9 /* DiscoverCVDataSource.swift */,
 				B35F0AB029FA394400C0E7E9 /* DiscoverCVCell.swift */,
+				B3DA8CCC2A108C7E00D82347 /* DiscoverCV.swift */,
 			);
 			path = Discover;
 			sourceTree = "<group>";
@@ -300,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B329538129F71E110026569E /* ChatViewController.swift in Sources */,
+				B356ABED2A3C7C4400E26F94 /* RippleButton.swift in Sources */,
 				B329536129F5B6E10026569E /* HomeViewController.swift in Sources */,
 				B35F0AA929F9BC7B00C0E7E9 /* Font.swift in Sources */,
 				B35F0AA729F98BBE00C0E7E9 /* AppSize.swift in Sources */,
@@ -308,16 +318,18 @@
 				B329538429F7898B0026569E /* MessageModels.swift in Sources */,
 				B35F0AA529F9887800C0E7E9 /* Color.swift in Sources */,
 				B329537229F5D61D0026569E /* Keys.swift in Sources */,
-				B35F0AAE29FA347C00C0E7E9 /* DiscoverCVDataSource.swift in Sources */,
 				B329535D29F5B6E10026569E /* AppDelegate.swift in Sources */,
 				B329537C29F644F90026569E /* NetworkManager.swift in Sources */,
 				B329535F29F5B6E10026569E /* SceneDelegate.swift in Sources */,
 				B35F0AC229FA8E6600C0E7E9 /* UIView+Extensions.swift in Sources */,
+				B356ABEF2A3C80B000E26F94 /* CustomCollectionView.swift in Sources */,
 				B329537529F5D6550026569E /* ChatGPTModelsAutomatic.swift in Sources */,
 				B35F0AB129FA394400C0E7E9 /* DiscoverCVCell.swift in Sources */,
 				B329538629F78EA80026569E /* UserData.swift in Sources */,
 				B35F0AA229F985C200C0E7E9 /* ZFRippleButton.swift in Sources */,
+				B3DA8CCD2A108C7E00D82347 /* DiscoverCV.swift in Sources */,
 				B329537829F5DAAA0026569E /* Constants.swift in Sources */,
+				B356ABF12A3C80FD00E26F94 /* CustomCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

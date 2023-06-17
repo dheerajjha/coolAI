@@ -10,12 +10,10 @@ import FirebaseAnalytics
 
 class HomeViewController: UIViewController {
     
-    private let rippleButtonSize: CGFloat = appWidth(0.6)
     private let topPadding: CGFloat = 16
     private let minPadding: CGFloat = 16
     private let leftRightPadding: CGFloat = 16
     private let avatarSize: CGFloat = 56
-    private lazy var rippleButtonCornerRadius: CGFloat = rippleButtonSize / 2
     
     lazy var containerView: UIView = {
         let scrollV = UIScrollView()
@@ -52,15 +50,8 @@ class HomeViewController: UIViewController {
     }()
     
     lazy var rippleButton: ZFRippleButton = {
-        let b = ZFRippleButton()
-        b.trackTouchLocation = true
-        b.backgroundColor = tertiaryColor
-        b.rippleColor = secondaryColor
-        b.rippleBackgroundColor = primaryColor
-        b.layer.cornerRadius = rippleButtonCornerRadius
-        b.rippleBackgroundView.layer.cornerRadius = rippleButtonCornerRadius
-        b.addTarget(self, action: #selector(hit), for: .touchUpInside)
-        b.magicAppear()
+        let b = RippleButton()
+        b.buttonTap = hit
         return b
     }()
     
@@ -77,6 +68,41 @@ class HomeViewController: UIViewController {
         return v
     }()
     
+    lazy var discoverView: DiscoverView = {
+        let v = DiscoverView(items: [
+            .init(title: "title", description: "des", imageLink: "https://blog.snappa.com/wp-content/uploads/2020/08/cropped-profile-icon-image_1200x1200-2-32x32.png", _prompt: "Assume you are a product manager. "),
+            
+                .init(title: "title", description: "des", imageLink: "https://blog.snappa.com/wp-content/uploads/2020/08/cropped-profile-icon-image_1200x1200-2-32x32.png", _prompt: "Assume you are a product manager. "),
+            
+                .init(title: "title", description: "des", imageLink: "https://blog.snappa.com/wp-content/uploads/2020/08/cropped-profile-icon-image_1200x1200-2-32x32.png", _prompt: "Assume you are a product manager. "),
+            
+                .init(title: "title", description: "des", imageLink: "https://blog.snappa.com/wp-content/uploads/2020/08/cropped-profile-icon-image_1200x1200-2-32x32.png", _prompt: "Assume you are a product manager. "),
+            
+                .init(title: "title", description: "des", imageLink: "https://blog.snappa.com/wp-content/uploads/2020/08/cropped-profile-icon-image_1200x1200-2-32x32.png", _prompt: "Assume you are a product manager. "),
+            
+            
+                .init(title: "title", description: "des", imageLink: "https://blog.snappa.com/wp-content/uploads/2020/08/cropped-profile-icon-image_1200x1200-2-32x32.png", _prompt: "Assume you are a product manager. "),
+            
+                .init(title: "title", description: "des", imageLink: "https://blog.snappa.com/wp-content/uploads/2020/08/cropped-profile-icon-image_1200x1200-2-32x32.png", _prompt: "Assume you are a product manager. "),
+            
+                .init(title: "title", description: "des", imageLink: "https://blog.snappa.com/wp-content/uploads/2020/08/cropped-profile-icon-image_1200x1200-2-32x32.png", _prompt: "Assume you are a product manager. "),
+            
+                .init(title: "title", description: "des", imageLink: "https://blog.snappa.com/wp-content/uploads/2020/08/cropped-profile-icon-image_1200x1200-2-32x32.png", _prompt: "Assume you are a product manager. "),
+            
+            
+                .init(title: "title", description: "des", imageLink: "https://blog.snappa.com/wp-content/uploads/2020/08/cropped-profile-icon-image_1200x1200-2-32x32.png", _prompt: "Assume you are a product manager. "),
+            
+                .init(title: "title", description: "des", imageLink: "https://blog.snappa.com/wp-content/uploads/2020/08/cropped-profile-icon-image_1200x1200-2-32x32.png", _prompt: "Assume you are a product manager. "),
+            
+                .init(title: "title", description: "des", imageLink: "https://blog.snappa.com/wp-content/uploads/2020/08/cropped-profile-icon-image_1200x1200-2-32x32.png", _prompt: "Assume you are a product manager. "),
+            
+                .init(title: "title", description: "des", imageLink: "https://blog.snappa.com/wp-content/uploads/2020/08/cropped-profile-icon-image_1200x1200-2-32x32.png", _prompt: "Assume you are a product manager. "),
+            
+                
+                .init(title: "title", description: "des", imageLink: "https://blog.snappa.com/wp-content/uploads/2020/08/cropped-profile-icon-image_1200x1200-2-32x32.png", _prompt: "Assume you are a product manager. ")
+        ])
+        return v
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,6 +114,13 @@ class HomeViewController: UIViewController {
         ])
         
         Analytics.logEvent("sample_event", parameters: nil)
+        
+        
+        let urlReq = URLRequest(url: URL(string: "https://useless.com")!)
+        URLSession.shared.dataTask(with: urlReq) {
+            data, _, _ in
+            print("call done")
+        }.resume()
     }
     
     private func setupConstraints() {
@@ -113,7 +146,7 @@ class HomeViewController: UIViewController {
         containerView.addSubview(rippleButton)
         rippleButton.snp.makeConstraints { make in
             make.top.equalTo(avatarTitleContainerView.snp.bottom).inset(-topPadding)
-            make.width.height.equalTo(rippleButtonSize)
+            make.width.height.equalTo(RippleButton.rippleButtonSize)
             make.centerX.equalToSuperview()
         }
         
@@ -130,20 +163,10 @@ class HomeViewController: UIViewController {
             make.bottom.equalToSuperview()
         }
         
-        let sv = UIStackView()
-        sv.distribution = .fillEqually
-        discoverContainerView.addSubview(sv)
-        sv.addArrangedSubview(DiscoverCell(vm: .init(title: "title", description: "description", imageLink: "", _prompt: "")))
-        sv.addArrangedSubview(DiscoverCell(vm: .init(title: "title", description: "description", imageLink: "", _prompt: "")))
-        sv.addArrangedSubview(DiscoverCell(vm: .init(title: "title", description: "description", imageLink: "", _prompt: "")))
-        sv.snp.makeConstraints { make in
-            make.top.left.right.equalToSuperview()
-        }
-        
+        discoverContainerView.addSubview(discoverView)
+        discoverView.snp.makeConstraints { $0.edges.equalToSuperview() }
     }
     
-    
-    @objc
     private func hit() {
         let vc = BasicExampleViewController()
         navigationController?.pushViewController(vc, animated: true)

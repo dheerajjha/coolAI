@@ -14,6 +14,8 @@ class ChatViewController: MessagesViewController, MessagesDataSource {
     
     var messageList: [GPTChatMessage] = []
     
+    var promptSetMessage: String = ""
+    
     private(set) lazy var refreshControl: UIRefreshControl = {
         let control = UIRefreshControl()
         control.addTarget(self, action: #selector(loadMoreMessages), for: .valueChanged)
@@ -272,7 +274,7 @@ extension ChatViewController: InputBarAccessoryViewDelegate {
         insertMessages(components)
         messagesCollectionView.scrollToLastItem(animated: true)
         
-        correctGrammar(prompt) { [weak self] response in
+        correctGrammar(promptSetMessage + prompt) { [weak self] response in
             DispatchQueue.main.async {
                 inputBar.sendButton.stopAnimating()
                 inputBar.inputTextView.placeholder = "Aa"
