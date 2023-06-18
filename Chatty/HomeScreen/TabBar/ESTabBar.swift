@@ -80,6 +80,51 @@ internal protocol ESTabBarDelegate: NSObjectProtocol {
 
 /// ESTabBar是高度自定义的UITabBar子类，通过添加UIControl的方式实现自定义tabBarItem的效果。目前支持tabBar的大部分属性的设置，例如delegate,items,selectedImge,itemPositioning,itemWidth,itemSpacing等，以后会更加细致的优化tabBar原有属性的设置效果。
 open class ESTabBar: UITabBar {
+    
+    // modified code start
+    
+    
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+        addRoundedSubview()
+    }
+    
+    required public init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    // TODO: Boxes are here (left and right)
+    
+    let left = UIView()
+    let right = UIView()
+    
+    private func addRoundedSubview() {
+        let left = UIView()
+        left.backgroundColor = .blue
+        
+        let right = UIView()
+        right.backgroundColor = .blue
+        
+        addSubview(left)
+        addSubview(right)
+        
+        left.snp.makeConstraints { make in
+            make.left.equalTo(self.snp.left)
+            make.bottom.equalTo(self.snp.top)
+            make.height.width.equalTo(40)
+        }
+        
+        right.snp.makeConstraints { make in
+            make.right.equalTo(self.snp.right)
+            make.bottom.equalTo(self.snp.top)
+            make.height.width.equalTo(40)
+        }
+        
+        
+
+    }
+    
+    // modified code end
 
     internal weak var customDelegate: ESTabBarDelegate?
     
