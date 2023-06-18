@@ -21,10 +21,16 @@
 		B329538129F71E110026569E /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B329538029F71E110026569E /* ChatViewController.swift */; };
 		B329538429F7898B0026569E /* MessageModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B329538329F7898B0026569E /* MessageModels.swift */; };
 		B329538629F78EA80026569E /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B329538529F78EA80026569E /* UserData.swift */; };
+		B340CC142A3EB8260004B839 /* ESTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B340CC0D2A3EB8240004B839 /* ESTabBarItem.swift */; };
+		B340CC152A3EB8260004B839 /* ESTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B340CC0E2A3EB8250004B839 /* ESTabBarController.swift */; };
+		B340CC162A3EB8260004B839 /* ESTabBarItemMoreContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B340CC0F2A3EB8250004B839 /* ESTabBarItemMoreContentView.swift */; };
+		B340CC172A3EB8260004B839 /* ESTabBarItemContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B340CC102A3EB8250004B839 /* ESTabBarItemContentView.swift */; };
+		B340CC182A3EB8260004B839 /* ESTabBarItemContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B340CC112A3EB8250004B839 /* ESTabBarItemContainer.swift */; };
+		B340CC192A3EB8260004B839 /* ESTabBarItemBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B340CC122A3EB8250004B839 /* ESTabBarItemBadgeView.swift */; };
+		B340CC1A2A3EB8260004B839 /* ESTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B340CC132A3EB8260004B839 /* ESTabBar.swift */; };
 		B356ABED2A3C7C4400E26F94 /* RippleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B356ABEC2A3C7C4400E26F94 /* RippleButton.swift */; };
 		B356ABEF2A3C80B000E26F94 /* CustomCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B356ABEE2A3C80B000E26F94 /* CustomCollectionView.swift */; };
 		B356ABF12A3C80FD00E26F94 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B356ABF02A3C80FD00E26F94 /* CustomCollectionViewCell.swift */; };
-		B35E6EF82A3EA17000EB8C02 /* ESTabBarController in Frameworks */ = {isa = PBXBuildFile; productRef = B35E6EF72A3EA17000EB8C02 /* ESTabBarController */; };
 		B35E6EFA2A3EA38600EB8C02 /* HomeTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35E6EF92A3EA38600EB8C02 /* HomeTabViewController.swift */; };
 		B35E6EFC2A3EA55A00EB8C02 /* HomeBounceContentTabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35E6EFB2A3EA55A00EB8C02 /* HomeBounceContentTabItem.swift */; };
 		B35F0A9F29F9828800C0E7E9 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B35F0A9E29F9828800C0E7E9 /* SnapKit */; };
@@ -61,6 +67,13 @@
 		B329538029F71E110026569E /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		B329538329F7898B0026569E /* MessageModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModels.swift; sourceTree = "<group>"; };
 		B329538529F78EA80026569E /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		B340CC0D2A3EB8240004B839 /* ESTabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESTabBarItem.swift; sourceTree = "<group>"; };
+		B340CC0E2A3EB8250004B839 /* ESTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESTabBarController.swift; sourceTree = "<group>"; };
+		B340CC0F2A3EB8250004B839 /* ESTabBarItemMoreContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESTabBarItemMoreContentView.swift; sourceTree = "<group>"; };
+		B340CC102A3EB8250004B839 /* ESTabBarItemContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESTabBarItemContentView.swift; sourceTree = "<group>"; };
+		B340CC112A3EB8250004B839 /* ESTabBarItemContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESTabBarItemContainer.swift; sourceTree = "<group>"; };
+		B340CC122A3EB8250004B839 /* ESTabBarItemBadgeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESTabBarItemBadgeView.swift; sourceTree = "<group>"; };
+		B340CC132A3EB8260004B839 /* ESTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESTabBar.swift; sourceTree = "<group>"; };
 		B356ABEC2A3C7C4400E26F94 /* RippleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RippleButton.swift; sourceTree = "<group>"; };
 		B356ABEE2A3C80B000E26F94 /* CustomCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionView.swift; sourceTree = "<group>"; };
 		B356ABF02A3C80FD00E26F94 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -87,7 +100,6 @@
 				B35F0A9F29F9828800C0E7E9 /* SnapKit in Frameworks */,
 				B3DB104429F979D7004BC7E4 /* Kingfisher in Frameworks */,
 				B35F0AC929FB10B600C0E7E9 /* FirebaseRemoteConfig in Frameworks */,
-				B35E6EF82A3EA17000EB8C02 /* ESTabBarController in Frameworks */,
 				B35F0AC729FB10B600C0E7E9 /* FirebaseCrashlytics in Frameworks */,
 				B35F0AC529FB10B600C0E7E9 /* FirebaseAnalytics in Frameworks */,
 				B329537F29F71DD60026569E /* MessageKit in Frameworks */,
@@ -157,9 +169,24 @@
 			path = MessageKit;
 			sourceTree = "<group>";
 		};
+		B340CC0C2A3EB81A0004B839 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				B340CC132A3EB8260004B839 /* ESTabBar.swift */,
+				B340CC0E2A3EB8250004B839 /* ESTabBarController.swift */,
+				B340CC0D2A3EB8240004B839 /* ESTabBarItem.swift */,
+				B340CC122A3EB8250004B839 /* ESTabBarItemBadgeView.swift */,
+				B340CC112A3EB8250004B839 /* ESTabBarItemContainer.swift */,
+				B340CC102A3EB8250004B839 /* ESTabBarItemContentView.swift */,
+				B340CC0F2A3EB8250004B839 /* ESTabBarItemMoreContentView.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 		B35F0A9A29F97F3D00C0E7E9 /* HomeScreen */ = {
 			isa = PBXGroup;
 			children = (
+				B340CC0C2A3EB81A0004B839 /* TabBar */,
 				B329536029F5B6E10026569E /* HomeViewController.swift */,
 				B35E6EF92A3EA38600EB8C02 /* HomeTabViewController.swift */,
 				B35E6EFB2A3EA55A00EB8C02 /* HomeBounceContentTabItem.swift */,
@@ -230,7 +257,6 @@
 				B35F0AC429FB10B600C0E7E9 /* FirebaseAnalytics */,
 				B35F0AC629FB10B600C0E7E9 /* FirebaseCrashlytics */,
 				B35F0AC829FB10B600C0E7E9 /* FirebaseRemoteConfig */,
-				B35E6EF72A3EA17000EB8C02 /* ESTabBarController */,
 			);
 			productName = Chatty;
 			productReference = B329535929F5B6E10026569E /* Chatty.app */;
@@ -265,7 +291,6 @@
 				B3DB104229F979D7004BC7E4 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				B35F0A9D29F9828800C0E7E9 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				B35F0AC329FB10B600C0E7E9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				B35E6EF62A3EA17000EB8C02 /* XCRemoteSwiftPackageReference "ESTabBarController" */,
 			);
 			productRefGroup = B329535A29F5B6E10026569E /* Products */;
 			projectDirPath = "";
@@ -321,18 +346,25 @@
 				B329538129F71E110026569E /* ChatViewController.swift in Sources */,
 				B356ABED2A3C7C4400E26F94 /* RippleButton.swift in Sources */,
 				B329536129F5B6E10026569E /* HomeViewController.swift in Sources */,
+				B340CC192A3EB8260004B839 /* ESTabBarItemBadgeView.swift in Sources */,
 				B35F0AA929F9BC7B00C0E7E9 /* Font.swift in Sources */,
+				B340CC182A3EB8260004B839 /* ESTabBarItemContainer.swift in Sources */,
 				B35F0AA729F98BBE00C0E7E9 /* AppSize.swift in Sources */,
+				B340CC152A3EB8260004B839 /* ESTabBarController.swift in Sources */,
 				B3DB104129F97922004BC7E4 /* BasicChatViewController.swift in Sources */,
+				B340CC142A3EB8260004B839 /* ESTabBarItem.swift in Sources */,
 				B35F0ACD29FB131B00C0E7E9 /* RemoteConfigs.swift in Sources */,
 				B35E6EFA2A3EA38600EB8C02 /* HomeTabViewController.swift in Sources */,
 				B329538429F7898B0026569E /* MessageModels.swift in Sources */,
 				B35F0AA529F9887800C0E7E9 /* Color.swift in Sources */,
 				B329537229F5D61D0026569E /* Keys.swift in Sources */,
+				B340CC172A3EB8260004B839 /* ESTabBarItemContentView.swift in Sources */,
 				B329535D29F5B6E10026569E /* AppDelegate.swift in Sources */,
 				B329537C29F644F90026569E /* NetworkManager.swift in Sources */,
+				B340CC1A2A3EB8260004B839 /* ESTabBar.swift in Sources */,
 				B329535F29F5B6E10026569E /* SceneDelegate.swift in Sources */,
 				B35F0AC229FA8E6600C0E7E9 /* UIView+Extensions.swift in Sources */,
+				B340CC162A3EB8260004B839 /* ESTabBarItemMoreContentView.swift in Sources */,
 				B35E6EFC2A3EA55A00EB8C02 /* HomeBounceContentTabItem.swift in Sources */,
 				B356ABEF2A3C80B000E26F94 /* CustomCollectionView.swift in Sources */,
 				B329537529F5D6550026569E /* ChatGPTModelsAutomatic.swift in Sources */,
@@ -489,7 +521,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = Z252X6C9JA;
+				DEVELOPMENT_TEAM = 3H586G8V4B;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Chatty/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -518,7 +550,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = Z252X6C9JA;
+				DEVELOPMENT_TEAM = 3H586G8V4B;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Chatty/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -571,14 +603,6 @@
 				minimumVersion = 4.0.0;
 			};
 		};
-		B35E6EF62A3EA17000EB8C02 /* XCRemoteSwiftPackageReference "ESTabBarController" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/eggswift/ESTabBarController.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
-			};
-		};
 		B35F0A9D29F9828800C0E7E9 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -610,11 +634,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B329537D29F71DD50026569E /* XCRemoteSwiftPackageReference "MessageKit" */;
 			productName = MessageKit;
-		};
-		B35E6EF72A3EA17000EB8C02 /* ESTabBarController */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B35E6EF62A3EA17000EB8C02 /* XCRemoteSwiftPackageReference "ESTabBarController" */;
-			productName = ESTabBarController;
 		};
 		B35F0A9E29F9828800C0E7E9 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
