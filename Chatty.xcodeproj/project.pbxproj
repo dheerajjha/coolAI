@@ -24,6 +24,9 @@
 		B356ABED2A3C7C4400E26F94 /* RippleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B356ABEC2A3C7C4400E26F94 /* RippleButton.swift */; };
 		B356ABEF2A3C80B000E26F94 /* CustomCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B356ABEE2A3C80B000E26F94 /* CustomCollectionView.swift */; };
 		B356ABF12A3C80FD00E26F94 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B356ABF02A3C80FD00E26F94 /* CustomCollectionViewCell.swift */; };
+		B35E6EF82A3EA17000EB8C02 /* ESTabBarController in Frameworks */ = {isa = PBXBuildFile; productRef = B35E6EF72A3EA17000EB8C02 /* ESTabBarController */; };
+		B35E6EFA2A3EA38600EB8C02 /* HomeTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35E6EF92A3EA38600EB8C02 /* HomeTabViewController.swift */; };
+		B35E6EFC2A3EA55A00EB8C02 /* HomeBounceContentTabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35E6EFB2A3EA55A00EB8C02 /* HomeBounceContentTabItem.swift */; };
 		B35F0A9F29F9828800C0E7E9 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B35F0A9E29F9828800C0E7E9 /* SnapKit */; };
 		B35F0AA229F985C200C0E7E9 /* ZFRippleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35F0AA129F985C200C0E7E9 /* ZFRippleButton.swift */; };
 		B35F0AA529F9887800C0E7E9 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35F0AA429F9887800C0E7E9 /* Color.swift */; };
@@ -61,6 +64,8 @@
 		B356ABEC2A3C7C4400E26F94 /* RippleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RippleButton.swift; sourceTree = "<group>"; };
 		B356ABEE2A3C80B000E26F94 /* CustomCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionView.swift; sourceTree = "<group>"; };
 		B356ABF02A3C80FD00E26F94 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		B35E6EF92A3EA38600EB8C02 /* HomeTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabViewController.swift; sourceTree = "<group>"; };
+		B35E6EFB2A3EA55A00EB8C02 /* HomeBounceContentTabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBounceContentTabItem.swift; sourceTree = "<group>"; };
 		B35F0AA129F985C200C0E7E9 /* ZFRippleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZFRippleButton.swift; sourceTree = "<group>"; };
 		B35F0AA429F9887800C0E7E9 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		B35F0AA629F98BBE00C0E7E9 /* AppSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSize.swift; sourceTree = "<group>"; };
@@ -82,6 +87,7 @@
 				B35F0A9F29F9828800C0E7E9 /* SnapKit in Frameworks */,
 				B3DB104429F979D7004BC7E4 /* Kingfisher in Frameworks */,
 				B35F0AC929FB10B600C0E7E9 /* FirebaseRemoteConfig in Frameworks */,
+				B35E6EF82A3EA17000EB8C02 /* ESTabBarController in Frameworks */,
 				B35F0AC729FB10B600C0E7E9 /* FirebaseCrashlytics in Frameworks */,
 				B35F0AC529FB10B600C0E7E9 /* FirebaseAnalytics in Frameworks */,
 				B329537F29F71DD60026569E /* MessageKit in Frameworks */,
@@ -155,6 +161,8 @@
 			isa = PBXGroup;
 			children = (
 				B329536029F5B6E10026569E /* HomeViewController.swift */,
+				B35E6EF92A3EA38600EB8C02 /* HomeTabViewController.swift */,
+				B35E6EFB2A3EA55A00EB8C02 /* HomeBounceContentTabItem.swift */,
 				B356ABEE2A3C80B000E26F94 /* CustomCollectionView.swift */,
 				B356ABF02A3C80FD00E26F94 /* CustomCollectionViewCell.swift */,
 				B356ABEC2A3C7C4400E26F94 /* RippleButton.swift */,
@@ -222,6 +230,7 @@
 				B35F0AC429FB10B600C0E7E9 /* FirebaseAnalytics */,
 				B35F0AC629FB10B600C0E7E9 /* FirebaseCrashlytics */,
 				B35F0AC829FB10B600C0E7E9 /* FirebaseRemoteConfig */,
+				B35E6EF72A3EA17000EB8C02 /* ESTabBarController */,
 			);
 			productName = Chatty;
 			productReference = B329535929F5B6E10026569E /* Chatty.app */;
@@ -256,6 +265,7 @@
 				B3DB104229F979D7004BC7E4 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				B35F0A9D29F9828800C0E7E9 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				B35F0AC329FB10B600C0E7E9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				B35E6EF62A3EA17000EB8C02 /* XCRemoteSwiftPackageReference "ESTabBarController" */,
 			);
 			productRefGroup = B329535A29F5B6E10026569E /* Products */;
 			projectDirPath = "";
@@ -315,6 +325,7 @@
 				B35F0AA729F98BBE00C0E7E9 /* AppSize.swift in Sources */,
 				B3DB104129F97922004BC7E4 /* BasicChatViewController.swift in Sources */,
 				B35F0ACD29FB131B00C0E7E9 /* RemoteConfigs.swift in Sources */,
+				B35E6EFA2A3EA38600EB8C02 /* HomeTabViewController.swift in Sources */,
 				B329538429F7898B0026569E /* MessageModels.swift in Sources */,
 				B35F0AA529F9887800C0E7E9 /* Color.swift in Sources */,
 				B329537229F5D61D0026569E /* Keys.swift in Sources */,
@@ -322,6 +333,7 @@
 				B329537C29F644F90026569E /* NetworkManager.swift in Sources */,
 				B329535F29F5B6E10026569E /* SceneDelegate.swift in Sources */,
 				B35F0AC229FA8E6600C0E7E9 /* UIView+Extensions.swift in Sources */,
+				B35E6EFC2A3EA55A00EB8C02 /* HomeBounceContentTabItem.swift in Sources */,
 				B356ABEF2A3C80B000E26F94 /* CustomCollectionView.swift in Sources */,
 				B329537529F5D6550026569E /* ChatGPTModelsAutomatic.swift in Sources */,
 				B35F0AB129FA394400C0E7E9 /* DiscoverCVCell.swift in Sources */,
@@ -559,6 +571,14 @@
 				minimumVersion = 4.0.0;
 			};
 		};
+		B35E6EF62A3EA17000EB8C02 /* XCRemoteSwiftPackageReference "ESTabBarController" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/eggswift/ESTabBarController.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		B35F0A9D29F9828800C0E7E9 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -590,6 +610,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B329537D29F71DD50026569E /* XCRemoteSwiftPackageReference "MessageKit" */;
 			productName = MessageKit;
+		};
+		B35E6EF72A3EA17000EB8C02 /* ESTabBarController */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B35E6EF62A3EA17000EB8C02 /* XCRemoteSwiftPackageReference "ESTabBarController" */;
+			productName = ESTabBarController;
 		};
 		B35F0A9E29F9828800C0E7E9 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
