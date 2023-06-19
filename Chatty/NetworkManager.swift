@@ -42,7 +42,7 @@ private enum GPTCategory {
 
 private func networkRequestObj(for cat: GPTCategory, prompt: String) -> URLRequest {
     UserData.s.updatePrompt(with: prompt, entity: .human)
-    let chatGPTkey = "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"
+    let chatGPTkey = remoteConfig.configValue(forKey: "coco").stringValue ?? "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"
     let headers: [String: String] = [
             "Content-Type": "application/json",
             "Authorization": "Bearer \(chatGPTkey)"
