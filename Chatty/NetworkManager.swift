@@ -25,7 +25,7 @@ private enum GPTCategory {
         return baseURL + addition
     }
     
-    func httpbody(with text: String) -> Data? {
+    func httpbody() -> Data? {
         let model = ChatGPTRequestModel(
             model: "text-davinci-003",
             prompt: UserData.s.prompt,
@@ -51,7 +51,7 @@ private func networkRequestObj(for cat: GPTCategory, prompt: String) -> URLReque
     let url = URL(string: cat.endpoint)!
     var urlRequest = URLRequest(url: url)
     urlRequest.httpMethod = "POST"
-    urlRequest.httpBody = cat.httpbody(with: prompt)
+    urlRequest.httpBody = cat.httpbody()
     headers.forEach { urlRequest.setValue($1, forHTTPHeaderField: $0) }
     
     return urlRequest
